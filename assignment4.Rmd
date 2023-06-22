@@ -71,7 +71,7 @@ print(t_test_result)
 ```
 
 **Question 3.2**: What is the $p$-value of the test, and what does that mean? Write down your answer below.
-# The p-value of the test is 0.0002782. This p-value represents the probability of observing the data or more extreme data if the null hypothesis of the test is true. In this case, the null hypothesis states that the true mean of the variable is equal to 0.
+# The p-value of the test is 0.06871. This p-value represents the probability of observing the data or more extreme data if the null hypothesis of the test is true. In this case, the null hypothesis states that the true mean of the variable is equal to 0.
 
 Since the p-value is very small (less than 0.05), it suggests strong evidence against the null hypothesis. It indicates that the observed data is highly unlikely to occur if the true mean is actually 0. Therefore, we reject the null hypothesis in favor of the alternative hypothesis, which states that the true mean is not equal to 0.
 
