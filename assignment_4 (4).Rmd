@@ -93,9 +93,9 @@ We now want to estimate a stepwise model. Stepwise means that we first estimate 
 
 ```{r}
 model1 <- lm(growth ~ treat, data = GrowthSW)
-model2 <- update(model1, . ~ . + tradeshare)
-model3 <- update(model2, . ~ . + education)
-model4 <- update(model3, . ~ . + assassinations)
+model2 <- update(model1, . ~ . + rgdp60)
+model3 <- update(model2, . ~ . + tradeshare)
+model4 <- update(model3, . ~ . + education)
 save(model1, model2, model3, model4, file = "stepwise_models.RData")
 ```
 
@@ -109,8 +109,7 @@ list(model1, model2, model3, model4) |>
 **Question 3.5**: Edit the code chunk above to remove many statistics from the table, but keep only the number of observations $N$, and the $R^2$ statistic. 
 
 **Question 3.6**: According to this analysis, what is the main driver of economic growth? Why?
-# The main driver of economic growth, according to the provided model summaries, appears to be the variable "tradeshare." This variable shows a statistically significant positive relationship with economic growth in models 2, 3, and 4. Other variables, such as "treatMore than 0 revolutions," "education," and "assassinations," do not consistently exhibit significant effects or have a lesser impact on economic growth.
-
+#According to the provided model summaries, the main driver of economic growth appears to be the variable "education." This variable consistently shows a statistically significant positive relationship with economic growth in all models (1, 2, 3, and 4). The coefficients for "education" are significant at the 0.001 level (***), indicating a strong impact on economic growth. Other variables, such as "treatmore than 0," "rgdp60," and "tradeshare," do not consistently exhibit statistically significant effects or have a weaker association with economic growth.
 
 **Question 3.7**: In the code chunk below, edit the table such that the cells (including standard errors) corresponding to the variable `treat` have a red background and white text. Make sure to load the `kableExtra` library beforehand.
 
