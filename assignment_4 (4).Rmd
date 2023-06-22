@@ -125,24 +125,9 @@ list(model1, model2, model3, model4) |>
 **Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
 
 ```{r}
-# Load the required packages
-library(flextable)
-library(officer)
+list(model1, model2, model3, model4) |>
+  modelsummary(stars = T, gof_map = c("nobs", "r.squared"), output = "Growth.docx")
 
-# Load the GrowthSW dataset (assuming it's available in R Studio)
-data(GrowthSW)
-
-# Create a flextable object from the GrowthSW table
-flex_tbl <- flextable(GrowthSW)
-
-# Create a Word document
-doc <- read_docx()
-
-# Add the flextable to the Word document
-doc <- body_add_flextable(doc, value = flex_tbl)
-
-# Save the Word document
-print(doc, target = "GrowthSW_Table.docx")
 ```
 
 ## The End
