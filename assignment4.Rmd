@@ -58,6 +58,8 @@ datasummary(growth+rgdp60~treat*(Mean+Median+SD+Min+Max),data=GrowthSW)
 ```
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
+#sanya hui sosi 
+The average in nations without revolutions is about two times greater than the average in nations with at least one revolution. Compared to nations with at least one revolution, the median growth of nations without revolutions is over 20% greater.
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
